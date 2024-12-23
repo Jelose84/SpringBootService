@@ -1,9 +1,10 @@
-package guijo.la.chupa.spring.repos;
+package com.pruebas.spring.repos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import guijo.la.chupa.spring.model.User;
+import com.pruebas.spring.model.User;
+
 import java.util.List;
 
 

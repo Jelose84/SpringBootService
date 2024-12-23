@@ -1,14 +1,15 @@
-package guijo.la.chupa.spring.service;
+package com.pruebas.spring.service;
 
-import guijo.la.chupa.spring.dto.UserDTO;
-import guijo.la.chupa.spring.model.User;
-import guijo.la.chupa.spring.repos.UserRepository;
-import guijo.la.chupa.spring.util.NotFoundException;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import com.pruebas.spring.dto.UserDTO;
+import com.pruebas.spring.model.User;
+import com.pruebas.spring.repos.UserRepository;
+import com.pruebas.spring.util.NotFoundException;
 
 
 @Service

@@ -1,7 +1,5 @@
-package guijo.la.chupa.spring.controller;
+package com.pruebas.spring.controller;
 
-import guijo.la.chupa.spring.dto.UserDTO;
-import guijo.la.chupa.spring.service.UserService;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +16,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.pruebas.spring.dto.UserDTO;
+import com.pruebas.spring.service.UserService;
 
 
 @RestController

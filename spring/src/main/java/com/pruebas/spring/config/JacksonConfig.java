@@ -1,4 +1,4 @@
-package guijo.la.chupa.spring.config;
+package com.pruebas.spring.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.SerializationFeature;

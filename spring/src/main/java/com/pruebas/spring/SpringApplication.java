@@ -1,4 +1,4 @@
-package guijo.la.chupa.spring;
+package com.pruebas.spring;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;

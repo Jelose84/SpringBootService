@@ -1,4 +1,4 @@
-package guijo.la.chupa.spring.model;
+package com.pruebas.spring.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

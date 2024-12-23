@@ -1,4 +1,4 @@
-package guijo.la.chupa.spring.util;
+package com.pruebas.spring.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
