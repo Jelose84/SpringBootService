@@ -18,14 +18,14 @@ public class UserService {
     private final UserRepository userRepository;
 
     public List<UserDTO> findAll() {
-        final List<User> users = userRepository.findAll(Sort.by("dni"));
+        final List<User> users = userRepository.findAll(Sort.by("id"));
         return users.stream()
                 .map(user -> mapToDTO(user, new UserDTO()))
                 .toList();
     }
 
-    public UserDTO get(final Long dni) {
-        return userRepository.findById(dni)
+    public UserDTO get(final Long id) {
+        return userRepository.findById(id)
                 .map(user -> mapToDTO(user, new UserDTO()))
                 .orElseThrow(NotFoundException::new);
     }
@@ -33,22 +33,22 @@ public class UserService {
     public Long create(final UserDTO userDTO) {
         final User user = new User();
         mapToEntity(userDTO, user);
-        return userRepository.save(user).getDni();
+        return userRepository.save(user).getId();
     }
 
-    public void update(final Long dni, final UserDTO userDTO) {
-        final User user = userRepository.findById(dni)
+    public void update(final Long id, final UserDTO userDTO) {
+        final User user = userRepository.findById(id)
                 .orElseThrow(NotFoundException::new);
         mapToEntity(userDTO, user);
         userRepository.save(user);
     }
 
-    public void delete(final Long dni) {
-        userRepository.deleteById(dni);
+    public void delete(final Long id) {
+        userRepository.deleteById(id);
     }
 
     private UserDTO mapToDTO(final User user, final UserDTO userDTO) {
-        userDTO.setDni(user.getDni());
+        userDTO.setId(user.getId());
         userDTO.setName(user.getName());
         userDTO.setPassword(user.getPassword());
         return userDTO;

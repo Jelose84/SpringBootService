@@ -7,14 +7,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Entity
-@Table(name = "\"User\"")
+@Table(name = "\"Usuario\"")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -29,7 +35,7 @@ public class User {
             strategy = GenerationType.SEQUENCE,
             generator = "primary_sequence"
     )
-    private Long dni;
+    private Long id;
 
     @Column(nullable = false)
     private String name;

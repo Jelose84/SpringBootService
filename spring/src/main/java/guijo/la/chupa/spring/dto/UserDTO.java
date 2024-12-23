@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 public class UserDTO {
 
-    private Long dni;
+    private Long id;
 
     @NotNull
     @Size(max = 255)

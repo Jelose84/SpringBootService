@@ -32,29 +32,29 @@ public class UserController {
         return ResponseEntity.ok(userService.findAll());
     }
 
-    @GetMapping("/{dni}")
-    public ResponseEntity<UserDTO> getUser(@PathVariable(name = "dni") final Long dni) {
-        return ResponseEntity.ok(userService.get(dni));
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDTO> getUser(@PathVariable(name = "id") final Long id) {
+        return ResponseEntity.ok(userService.get(id));
     }
 
     @PostMapping
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Long> createUser(@RequestBody @Valid final UserDTO userDTO) {
-        final Long createdDni = userService.create(userDTO);
-        return new ResponseEntity<>(createdDni, HttpStatus.CREATED);
+        final Long createdId = userService.create(userDTO);
+        return new ResponseEntity<>(createdId, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{dni}")
-    public ResponseEntity<Long> updateUser(@PathVariable(name = "dni") final Long dni,
+    @PutMapping("/{id}")
+    public ResponseEntity<Long> updateUser(@PathVariable(name = "id") final Long id,
             @RequestBody @Valid final UserDTO userDTO) {
-        userService.update(dni, userDTO);
-        return ResponseEntity.ok(dni);
+        userService.update(id, userDTO);
+        return ResponseEntity.ok(id);
     }
 
-    @DeleteMapping("/{dni}")
+    @DeleteMapping("/{id}")
     @ApiResponse(responseCode = "204")
-    public ResponseEntity<Void> deleteUser(@PathVariable(name = "dni") final Long dni) {
-        userService.delete(dni);
+    public ResponseEntity<Void> deleteUser(@PathVariable(name = "id") final Long id) {
+        userService.delete(id);
         return ResponseEntity.noContent().build();
     }
 
