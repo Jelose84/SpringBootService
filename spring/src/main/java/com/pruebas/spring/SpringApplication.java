@@ -7,8 +7,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @SpringBootApplication
-@EntityScan("guijo.la.chupa.spring.model")
-@EnableJpaRepositories("guijo.la.chupa.spring.repos")
+@EntityScan("com.pruebas.spring.model")
+@EnableJpaRepositories("com.pruebas.spring.repos")
 @EnableTransactionManagement
 public class SpringApplication {
 
