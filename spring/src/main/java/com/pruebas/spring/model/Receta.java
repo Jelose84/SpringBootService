@@ -1,5 +1,9 @@
 package com.pruebas.spring.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -32,4 +36,8 @@ public class Receta {
     @ManyToOne
     @JoinColumn(name = "idUsuario")
     private Usuario usuario;
+
+    @OneToMany(mappedBy = "id.receta", cascade = CascadeType.ALL)
+    @Builder.Default
+    private Set<RecetaAlimento> recetaAlimentos = new HashSet<>();
 }

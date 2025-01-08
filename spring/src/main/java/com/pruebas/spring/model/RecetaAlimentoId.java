@@ -2,16 +2,16 @@ package com.pruebas.spring.model;
 
 import java.io.Serializable;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Embeddable
 @Data
 public class RecetaAlimentoId implements Serializable {
-    @Column
-    private Long idReceta;
+    @ManyToOne
+    private Receta receta;
 
-    @Column
-    private Long idAlimento;
+    @ManyToOne
+    private Alimento alimento;
 }
