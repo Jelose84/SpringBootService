@@ -11,5 +11,6 @@
             "password": "admin",
             "database": "postgres"
         }
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

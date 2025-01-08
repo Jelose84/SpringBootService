@@ -4,6 +4,13 @@
             "type": "java",
             "name": "SpringApplication",
             "request": "launch",
+            "mainClass": "com.pruebas.spring.SpringApplication",
+            "projectName": "spring"
+        },
+        {
+            "type": "java",
+            "name": "SpringApplication",
+            "request": "launch",
             "mainClass": "guijo.la.chupa.spring.SpringApplication",
             "projectName": "spring"
         },
